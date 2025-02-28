@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="谷歌账号购买">
+    <meta name="keywords" content="谷歌账号购买, 谷歌账号代注册, YouTube账号注册, YouTube账号购买,谷歌账号免费注册,油管账号购买,油管账号注册">
+    <meta name="author" content="谷歌账号购买">
+    <title>商品页面</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="product-page">
+        <div class="product-info">
+            <div class="product-thumbnail">
+                <img src="tubiao.jpg" alt="商品缩略图">
+            </div>
+
+            <div class="product-details">
+                <h1 id="product-title">谷歌账号[一次性-临时账号]</h1> <!-- 1 -->
+                <p class="price" id="price">￥6.9</p>
+                <p class="old-price"><del>全网底价</del></p>
+                <ul class="features">
+                    <li><img src="自动发货.png" alt="图标1">自动发货</li>
+                    <li><img src="货源中心.png" alt="图标2">优质货源</li>
+                    <li><img src="金牌.png" alt="图标3">金牌卖家</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="product-options">
+            <label for="product-spec">选择规格：</label>
+            <select id="product-spec" name="spec" onchange="updatePrice()">
+                <option value="option1" selected>谷歌账号[一次性] - ￥6.9</option>
+                <option value="option2">谷歌账号[随机-邮箱未认证手机号] - ￥11.9</option>
+                <option value="option3">谷歌账号[代注册-指定邮箱手机号] - ￥15.9</option>
+            </select>
+        </div>
+
+        <div class="product-description">
+            <h2>请注意</h2>
+            <p>商品无法退换货，确认选择后付款。</p>
+        </div>
+
+        <div class="buy-now">
+            <button onclick="buyNow()">立即购买</button>
+        </div>
+
+        <!-- 加载中动画和二维码 -->
+        <div id="loading" class="loading" style="display:none;">
+            <!-- 修改这里的src属性为你自己的loading.gif图片路径 -->
+            <img src="加载.gif" alt="加载中...">
+        </div>
+        <div id="payment-qr" class="payment-qr" style="display:none;">
+            <!-- 根据选择的规格动态修改二维码 -->
+            <img id="qr-code" src="6.9.jpg" alt="支付二维码">
+            <p id="payment-amount">支付金额：￥6.9</p> <!-- 显示动态支付金额 -->
+        </div>
+    </div>
+
+    <script>
+        // 更新价格、商品标题和二维码
+        function updatePrice() {
+            const spec = document.getElementById("product-spec").value;
+            const priceDisplay = document.getElementById("price");
+            const paymentAmount = document.getElementById("payment-amount");
+            const productTitle = document.getElementById("product-title");  // 商品名称
+            const qrCode = document.getElementById("qr-code"); // 收款二维码
+
+            if (spec === "option1") {
+                priceDisplay.innerHTML = "￥6.9";
+                paymentAmount.innerHTML = "支付金额：￥6.9";
+                productTitle.innerHTML = "谷歌账号[一次性-临时账号]"; // 更新标题
+                qrCode.src = "C:/Users/Administrator/Desktop/323/6.9.jpg"; // 更新二维码路径
+            } else if (spec === "option2") {
+                priceDisplay.innerHTML = "￥11.9";
+                paymentAmount.innerHTML = "支付金额：￥11.9";
+                productTitle.innerHTML = "谷歌账号[随机-邮箱未认证手机号]"; // 更新标题
+                qrCode.src = "C:/Users/Administrator/Desktop/323/11.9.jpg"; // 更新二维码路径
+            } else if (spec === "option3") {
+                priceDisplay.innerHTML = "￥15.9";
+                paymentAmount.innerHTML = "支付金额：￥15.9";
+                productTitle.innerHTML = "谷歌账号[代注册-指定邮箱手机号]"; // 更新标题
+                qrCode.src = "C:/Users/Administrator/Desktop/323/15.9.jpg"; // 更新二维码路径
+            }
+        }
+
+        // 立即购买
+        function buyNow() {
+            // 显示加载动画
+            document.getElementById("loading").style.display = "block";
+            setTimeout(function() {
+                // 隐藏加载动画，显示二维码
+                document.getElementById("loading").style.display = "none";
+                document.getElementById("payment-qr").style.display = "block";
+            }, 2000); // 2秒后显示二维码
+        }
+    </script>
+
+</body>
+</html>
