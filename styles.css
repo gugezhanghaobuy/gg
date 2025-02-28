@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.product-page {
+    background-color: #e53935;  /* 红色背景 */
+    width: 80%;
+    max-width: 1200px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product-thumbnail img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-details {
+    margin-left: 30px;
+    flex-grow: 1;
+}
+
+.product-details h1 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.old-price {
+    font-size: 18px;
+    color: #e5e5e5;
+    text-decoration: line-through;
+}
+
+.features {
+    display: flex;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.features li {
+    margin-right: 30px;
+    font-size: 14px;
+    color: #e5e5e5;
+    display: flex;
+    align-items: center;
+}
+
+.features img {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.product-options {
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.product-description {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #e5e5e5;
+}
+
+.buy-now {
+    margin-top: 40px;
+}
+
+.buy-now button {
+    background-color: #ffffff;
+    color: #e53935;
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.buy-now button:hover {
+    background-color: #ffebee;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.loading {
+    text-align: center;
+}
+
+.payment-qr {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.payment-qr img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.payment-qr p {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 10px;
+}
