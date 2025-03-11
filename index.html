@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
+    <meta name="360-site-verification" content="f3738333f4399a85fee83e283fa6e227" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="本网站提供高质量谷歌账号购买、代注册服务，支持24小时自动发货，全网底价，安全可靠，适用于YouTube账号注册、Instagram账号注册，欢迎选购！">
@@ -49,20 +50,20 @@
             <button onclick="buyNow()">立即购买</button>
         </div>
 
-        <!-- 加载中动画和二维码 -->
+        
         <div id="loading" class="loading" style="display:none;">
-            <!-- 修改这里的src属性为你自己的loading.gif图片路径 -->
+            
             <img src="加载.gif" alt="加载中...">
         </div>
         <div id="payment-qr" class="payment-qr" style="display:none;">
-            <!-- 根据选择的规格动态修改二维码 -->
+           
             <img id="qr-code" src="6.9.jpg" alt="支付二维码">
             <p id="payment-amount">支付金额：￥6.9</p> <!-- 显示动态支付金额 -->
         </div>
     </div>
 
     <script>
-        // 更新价格、商品标题和二维码
+       
         function updatePrice() {
             const spec = document.getElementById("product-spec").value;
             const priceDisplay = document.getElementById("price");
@@ -84,19 +85,19 @@
                 priceDisplay.innerHTML = "￥15.9";
                 paymentAmount.innerHTML = "支付金额：￥15.9";
                 productTitle.innerHTML = "谷歌账号[代注册-指定邮箱手机号]"; // 更新标题
-                qrCode.src = "15.9.jpg"; // 更新二维码路径
+                qrCode.src = "15.9.jpg"; 
             }
         }
 
-        // 立即购买
+        
         function buyNow() {
-            // 显示加载动画
+            
             document.getElementById("loading").style.display = "block";
             setTimeout(function() {
-                // 隐藏加载动画，显示二维码
+               
                 document.getElementById("loading").style.display = "none";
                 document.getElementById("payment-qr").style.display = "block";
-            }, 2000); // 2秒后显示二维码
+            }, 2000);
         }
     </script>
 
